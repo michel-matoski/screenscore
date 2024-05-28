@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:wght@400;600&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">ScreenScore</h1>
+        <div class="content">
+            <div class="form-container">
+                <h2>Cadastro de Filmes</h2>
+                <form id="movieForm">
+                    <div class="form-group">
+                        <label for="movieName">Nome do Filme:</label>
+                        <input type="text" id="movieName" name="movieName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieRating">Nota do Filme:</label>
+                        <div class="rating">
+                            <input type="radio" name="rating" id="rating5" value="5"><label for="rating5">☆</label>
+                            <input type="radio" name="rating" id="rating4" value="4"><label for="rating4">☆</label>
+                            <input type="radio" name="rating" id="rating3" value="3"><label for="rating3">☆</label>
+                            <input type="radio" name="rating" id="rating2" value="2"><label for="rating2">☆</label>
+                            <input type="radio" name="rating" id="rating1" value="1"><label for="rating1">☆</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieImage">Imagem do Filme:</label>
+                        <input type="file" id="movieImage" name="movieImage" accept="image/*" required>
+                    </div>
+                    
+                    <button type="submit">Adicionar Filme</button>
+                </form>
+            </div>
+            
+            <div class="movie-list-container" id="movieListContainer">
+                <div id="movieList">
+                    <h2>Lista de Filmes</h2>
+                    <div id="movieGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
